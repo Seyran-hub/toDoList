@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Draggable } from 'react-beautiful-dnd';
 
-export default function List({ todo, i, setToDos, checkComplete, handleEdit, id }) {
+export default function List({ todo, i, setToDos, switchComplete, handleEdit, id }) {
     const [onEdit, setOnedit] = useState(false)
     const [editValue, setEditValue] = useState(todo.name)
 
@@ -11,17 +11,7 @@ export default function List({ todo, i, setToDos, checkComplete, handleEdit, id 
     const handleSave = id => {
         setOnedit(false)
         todo.name = editValue
-        setListData()
-    }
-
-    const checkListItem = (i) => {
-        todo.complete = i.target.checked
-        setListData()
-    }
-
-    const setListData = () => {
-        setToDos(todo)
-        handleEdit(editValue, id)
+        handleEdit(todo.name, id)
     }
 
     if (onEdit) {
@@ -41,7 +31,7 @@ export default function List({ todo, i, setToDos, checkComplete, handleEdit, id 
                     <li {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
                         <label htmlFor={i} className={todo.complete === true ? 'active' : ''}>
                             <input type='checkbox' id={i} checked={todo.complete}
-                                onChange={(e) => checkListItem(e)} />
+                                onChange={(e) => switchComplete(id)} />
                             {todo.name}
                         </label>
                         <button disabled={todo.complete} onClick={handleOnEdit}>Edit</button>

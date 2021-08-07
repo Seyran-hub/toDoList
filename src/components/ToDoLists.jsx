@@ -55,7 +55,7 @@ export default function ToDoLists(props) {
                         <ul className="characters" {...provided.droppableProps} ref={provided.innerRef}>
                             {
                                 toDos.map((elem, i) => (
-                                    <List key={i} todo={elem} id={i} setToDos={setToDos} toDos={toDos} checkComplete={switchComplete} handleEdit={handleEdit} />
+                                    <List key={i} todo={elem} id={i} switchComplete={switchComplete} setToDos={setToDos} toDos={toDos} checkComplete={switchComplete} handleEdit={handleEdit} />
                                 ))
                             }
                         </ul>
