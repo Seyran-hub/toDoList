@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(209, 209, 243);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App{
+  max-width: 800px;
+  width: 100%;
+  min-height: 500px;
+  box-shadow:  0 2px 6px rgb(34, 32, 32);
+  margin: 40px auto;
+  padding: 50px;
+  background-color: #f7f7f7;
+}
+h1{
+  text-align: center;
+  font-weight: 900;
+  color: rgb(51, 42, 42);
+}
+h2{
+  text-align: center;
+  font-weight: 900;
+  color: rgb(51, 42, 42);
+}
+form{
+  width: 100%;
+  height: 40px;
+  margin: 20px 0;
+  display: flex;
+}
+
+form input,
+form button{
+  flex:3;
+ border: none;
+ outline: none;
+ border: 1px solid crimson;
+    border-radius: 3px;
+}
+
+form button{
+  flex: 1;
+  background: #f7f7f7;
+  color: rgb(51, 42, 42);
+  letter-spacing: 4px;
+  cursor: pointer;
+  font-weight: bold;
+ border: 3px solid crimson;
+    border-radius: 11px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+ul li button:hover{
+  background-color: #F7F7FF;
+  transition: 2ms;
+}
+form button:hover{
+  background-color: #F7F7FF;
+  transition: 2ms;
+}
+ul{
+  padding: 0;
+}
+ul li{
+  list-style: none;
+  border: 1px solid crimson;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  border-radius: 3px;
+}
+
+ul li .active{
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+ul li input,
+.row input{
+  margin-right: 5px;
+  transform: translateY(1px);
+  padding: 10px;
+  border: 1px solid crimson;
+  border-radius: 3px;
+  font-size: 16px;
+}
+li label {
+  font-weight: bold;
+}
+
+ul li button,
+.row button{
+  border:none;
+  outline: none;
+  color: rgb(51, 42, 42);
+  border: 3px solid crimson;
+  background: #f7f7f7;
+  padding: 5px 35px;
+  cursor: pointer;
+  border-radius: 11px;
+}
+.row button{
+  background: crimson;
+  font-size: 20px;
+  color: rgb(51, 42, 42) ;
+  margin-left: auto
+}
+h2 span{
+  color:crimson
+}
+.row button:hover{
+  background: rgb(139, 7, 33);
+  font-size: 20px;
+  color: rgb(241, 204, 204)
+}
+
+
+ul li button:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+label{
+  cursor: pointer;
+}
+
+.row #deleted{
+  background: crimson;
+}
+
+.ss{
+  cursor: grab;
+}
